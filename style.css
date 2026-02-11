@@ -1,0 +1,23 @@
+/* Garante a aplicação da fonte Poppins em todo o corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Classes para a animação de Reveal (Entrada Suave)
+   Os elementos começam invisíveis e levemente deslocados para baixo
+*/
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* Quando a classe 'active' é injetada via JS, o elemento aparece */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Utilitários para escalonar a entrada dos cards no grid */
+.transition-delay-100 { transition-delay: 100ms; }
+.transition-delay-200 { transition-delay: 200ms; }
